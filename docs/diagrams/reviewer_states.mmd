@@ -1,0 +1,47 @@
+---
+config:
+  theme: base
+  themeVariables:
+    primaryColor: "#E8F0FA"
+    primaryTextColor: "#12263F"
+    primaryBorderColor: "#1F4E79"
+    lineColor: "#44546A"
+    fontFamily: "arial, helvetica, sans-serif"
+    fontSize: "15px"
+  flowchart:
+    curve: basis
+    padding: 20
+    nodeSpacing: 55
+    rankSpacing: 65
+---
+flowchart LR
+    S(["&nbsp;Request built&nbsp;<br/>&nbsp;no dollar amounts&nbsp;"])
+    R{"&nbsp;Model&nbsp;<br/>&nbsp;reachable?&nbsp;"}
+    P{"&nbsp;Parses to&nbsp;<br/>&nbsp;schema?&nbsp;"}
+    E{"&nbsp;APPROVE has&nbsp;<br/>&nbsp;evidence?&nbsp;"}
+    C{"&nbsp;Citations&nbsp;<br/>&nbsp;resolve?&nbsp;"}
+    V(["&nbsp;Verdict honored&nbsp;<br/>&nbsp;APPROVE / REJECT / ABSTAIN&nbsp;"])
+    A(["&nbsp;ABSTAIN&nbsp;<br/>&nbsp;no trade&nbsp;"])
+
+    S --> R
+    R -- "yes" --> P
+    P -- "yes" --> E
+    E -- "yes" --> C
+    C -- "yes" --> V
+
+    R -- "no: unreachable&nbsp;" --> A
+    P -- "no: schema violation&nbsp;" --> A
+    E -- "no: unsupported claim&nbsp;" --> A
+    C -- "no: fabricated source&nbsp;" --> A
+
+    N["&nbsp;Within a review, every failure edge terminates at ABSTAIN.&nbsp;<br/>&nbsp;Outside it: with no model reachable at startup,&nbsp;<br/>&nbsp;resolve_reviewer falls back to the offline rules&nbsp;<br/>&nbsp;reviewer, which can approve.&nbsp;"]
+    A -.-> N
+
+    classDef ok fill:#E3F5E6,stroke:#2E7D32,stroke-width:2px,color:#12331A
+    classDef bad fill:#FDE5E2,stroke:#B03020,stroke-width:2.5px,color:#4A0F0A
+    classDef dec fill:#FFF6DC,stroke:#B08900,stroke-width:1.5px,color:#3D2E00
+    classDef note fill:#F2F2F2,stroke:#999999,stroke-width:1px,color:#333333
+    class V,S ok
+    class A bad
+    class R,P,E,C dec
+    class N note

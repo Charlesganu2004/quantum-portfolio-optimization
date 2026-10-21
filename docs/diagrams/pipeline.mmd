@@ -1,0 +1,39 @@
+---
+config:
+  theme: base
+  themeVariables:
+    fontFamily: "Arial, Helvetica, sans-serif"
+    fontSize: "16px"
+  flowchart:
+    curve: basis
+    nodeSpacing: 40
+    rankSpacing: 45
+---
+flowchart LR
+    A["Market data"]
+    B["Features: mu, Sigma"]
+    C["Optimizer<br/>produces candidate weights"]
+    D["Fixed evidence set<br/>4 formula records"]
+    E["Reviewer<br/>local model or offline rules"]
+    F["Risk gate<br/>18 reject reasons"]
+    G["Paper order"]
+
+    A --> B --> C --> D --> E
+    E -- "verdict only" --> F
+    F -- "approve or reject<br/>a fixed-size entry" --> G
+
+    C -. "the reviewer can only<br/>subtract from this set" .-> F
+
+    N1["Prompt contains no dollar amounts.<br/>Asserted by test."]
+    N2["Model output can never<br/>become a number on an order."]
+    E -.- N1
+    F -.- N2
+
+    classDef det fill:#E8F0FA,stroke:#1F4E79,stroke-width:1.5px,color:#12263F
+    classDef llm fill:#FFF1DC,stroke:#B36B00,stroke-width:2px,color:#4A2E00
+    classDef auth fill:#FDE5E2,stroke:#B03020,stroke-width:2.5px,color:#4A0F0A
+    classDef note fill:#F5F5F5,stroke:#AAAAAA,stroke-dasharray: 3 3,color:#444444
+    class A,B,C,D det
+    class E llm
+    class F,G auth
+    class N1,N2 note

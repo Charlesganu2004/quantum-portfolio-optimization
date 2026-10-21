@@ -1,0 +1,45 @@
+---
+config:
+  theme: base
+  themeVariables:
+    fontFamily: "Arial, Helvetica, sans-serif"
+    fontSize: "15px"
+---
+stateDiagram-v2
+    direction LR
+
+    state "Trading permitted<br/>consecutive_losses = 0" as OK
+    state "1 consecutive loss" as L1
+    state "2 consecutive losses" as L2
+    state "HALTED<br/>gate blocks every order" as H
+    state "Step scores exactly 0.00<br/>no order was submitted" as Z
+
+    [*] --> OK
+    OK --> L1 : losing trade
+    L1 --> L2 : losing trade
+    L2 --> H : 3rd losing trade
+    L1 --> OK : winning trade
+    L2 --> OK : winning trade
+
+    H --> Z : gate rejects the entry
+    Z --> H : no trade, so the counter cannot change
+
+    note right of H
+        Deliberate: the halt stays
+        latched for the rest of the
+        session. A control that silently
+        resumes is not a control.
+        halted_at_interval records when
+        it engaged, and statistics use
+        only the steps before it.
+    end note
+
+    note right of Z
+        Only traded steps move the
+        counter. A blocked step is
+        neither a win nor a loss.
+        All 30 runs in
+        reports/trade_analysis.json
+        halted, at a mean step of 12.8
+        to 16.8 out of 200.
+    end note

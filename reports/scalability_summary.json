@@ -1,0 +1,19 @@
+{
+  "universe_sizes": [
+    4,
+    8,
+    16,
+    32,
+    64
+  ],
+  "repeats": 3,
+  "cardinality_cap": 4,
+  "train_sessions": 300,
+  "methods": [
+    "heuristic",
+    "mean_variance",
+    "qaoa_simulated",
+    "qubo_annealing"
+  ],
+  "ground_truth_available_up_to": 32
+}

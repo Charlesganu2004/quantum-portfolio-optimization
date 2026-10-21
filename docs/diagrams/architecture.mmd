@@ -1,0 +1,70 @@
+---
+config:
+  theme: base
+  themeVariables:
+    fontFamily: "Arial, Helvetica, sans-serif"
+    fontSize: "15px"
+  flowchart:
+    curve: basis
+    nodeSpacing: 40
+    rankSpacing: 50
+---
+flowchart TB
+    subgraph L1["DATA LAYER"]
+        A1["Alpaca IEX bars<br/><i>real, needs paper keys</i>"]
+        A2["Synthetic generator<br/><i>3-factor, no credentials</i>"]
+        A3["Features<br/>annualized mu, Ledoit-Wolf Sigma"]
+        A1 --> A3
+        A2 --> A3
+    end
+
+    subgraph L2["OPTIMIZATION LAYER: same inputs, same objective"]
+        FAN(("same<br/>inputs"))
+        B1["Mean-variance<br/>relax then truncate"]
+        B2["Heuristic<br/>backward elimination + swap"]
+        B3["QUBO annealing<br/>quantum-inspired"]
+        B4["QAOA<br/>simulated, 14 qubit cap"]
+        JOIN(("candidate<br/>weights"))
+        FAN --> B1 --> JOIN
+        FAN --> B2 --> JOIN
+        FAN --> B3 --> JOIN
+        FAN --> B4 --> JOIN
+    end
+
+    subgraph L3["REVIEW LAYER: advisory only, cannot authorize"]
+        C1["Knowledge base<br/>provenance records"]
+        C2["local model (llama3.2:3b)<br/>or offline rules stand-in<br/>schema-constrained"]
+        C3["Citation verifier<br/>deterministic"]
+        C1 --> C2 --> C3
+    end
+
+    subgraph L4["CONTROL LAYER: gate approves or rejects each entry"]
+        D1["Risk gate<br/>18 reject reasons<br/>fixed-size entry, gate derives the stop"]
+        D2["Paper broker<br/>simulated fills<br/>exit sells skip the gate"]
+        D3["Live broker<br/>DISABLED, raises on call"]
+        D1 --> D2
+        D1 -. "no code path" .-> D3
+    end
+
+    A3 --> FAN
+    JOIN -- "candidate weights &nbsp;" --> C2
+    C3 -- "verdict only &nbsp;" --> D1
+
+    classDef data fill:#E8F0FA,stroke:#1F4E79,stroke-width:1.5px,color:#12263F
+    classDef opt fill:#EAF3EC,stroke:#2E7D32,stroke-width:1.5px,color:#12331A
+    classDef llm fill:#FFF1DC,stroke:#B36B00,stroke-width:1.5px,color:#4A2E00
+    classDef ctl fill:#FDE5E2,stroke:#B03020,stroke-width:2px,color:#4A0F0A
+    classDef off fill:#EEEEEE,stroke:#888888,stroke-dasharray: 5 4,color:#555555
+    classDef hub fill:#2E7D32,stroke:#1B5E20,color:#FFFFFF
+
+    class A1,A2,A3 data
+    class B1,B2,B3,B4 opt
+    class C1,C2,C3 llm
+    class D1,D2 ctl
+    class D3 off
+    class FAN,JOIN hub
+
+    style L1 fill:#F7FAFF,stroke:#9DB8D6,stroke-dasharray: 5 4
+    style L2 fill:#F6FBF7,stroke:#93C39C,stroke-dasharray: 5 4
+    style L3 fill:#FFFAF2,stroke:#D9A45B,stroke-dasharray: 5 4
+    style L4 fill:#FFF6F5,stroke:#D98B80,stroke-dasharray: 5 4

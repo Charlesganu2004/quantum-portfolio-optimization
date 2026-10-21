@@ -1,0 +1,254 @@
+{
+  "settings": {
+    "reps": 2,
+    "max_iterations": 250,
+    "penalty_multiplier": 5.0
+  },
+  "verdict": "overfit",
+  "holdout": {
+    "summary": {
+      "cases": 12,
+      "qaoa_mean_gap": 0.5325554622735007,
+      "qaoa_worst_gap": 2.576414401947787,
+      "qaoa_optimal_hits": 5,
+      "qubo_mean_gap": 0.0015169670525633516,
+      "qubo_worst_gap": 0.01820360463076022,
+      "qubo_optimal_hits": 11,
+      "qaoa_mean_ms": 3859.141524999965,
+      "qubo_mean_ms": 56.360841666294924
+    },
+    "cases": [
+      {
+        "n": 8,
+        "cap": 3,
+        "seed": 101,
+        "qaoa_gap": 0.3644075922346043,
+        "qubo_gap": 0.0,
+        "qaoa_shortfall": 0.05357916947227653,
+        "qubo_shortfall": 0.0,
+        "feasible_mass": 0.43530865263780305,
+        "qaoa_ms": 2101.115999998001,
+        "qubo_ms": 39.94629999942845
+      },
+      {
+        "n": 8,
+        "cap": 4,
+        "seed": 102,
+        "qaoa_gap": 0.0,
+        "qubo_gap": 0.0,
+        "qaoa_shortfall": 0.0,
+        "qubo_shortfall": 0.0,
+        "feasible_mass": 0.7953759104442254,
+        "qaoa_ms": 2250.3667999990284,
+        "qubo_ms": 41.13050000160001
+      },
+      {
+        "n": 9,
+        "cap": 3,
+        "seed": 103,
+        "qaoa_gap": 2.576414401947787,
+        "qubo_gap": 0.0,
+        "qaoa_shortfall": 0.2479801296479011,
+        "qubo_shortfall": 0.0,
+        "feasible_mass": 0.477192639636834,
+        "qaoa_ms": 2851.020200003404,
+        "qubo_ms": 41.63900000276044
+      },
+      {
+        "n": 9,
+        "cap": 4,
+        "seed": 104,
+        "qaoa_gap": 0.01820360463076022,
+        "qubo_gap": 0.01820360463076022,
+        "qaoa_shortfall": 0.0029412992134325577,
+        "qubo_shortfall": 0.0029412992134325577,
+        "feasible_mass": 0.3946104948597404,
+        "qaoa_ms": 2907.375700000557,
+        "qubo_ms": 53.87409999821102
+      },
+      {
+        "n": 10,
+        "cap": 3,
+        "seed": 105,
+        "qaoa_gap": 0.0,
+        "qubo_gap": 0.0,
+        "qaoa_shortfall": 0.0,
+        "qubo_shortfall": 0.0,
+        "feasible_mass": 0.5932689923722863,
+        "qaoa_ms": 3672.3784000059823,
+        "qubo_ms": 54.26879999868106
+      },
+      {
+        "n": 10,
+        "cap": 4,
+        "seed": 106,
+        "qaoa_gap": 0.0,
+        "qubo_gap": 0.0,
+        "qaoa_shortfall": 0.0,
+        "qubo_shortfall": 0.0,
+        "feasible_mass": 0.5270484474181087,
+        "qaoa_ms": 4042.5901999988127,
+        "qubo_ms": 58.89789999491768
+      },
+      {
+        "n": 11,
+        "cap": 3,
+        "seed": 107,
+        "qaoa_gap": 0.0,
+        "qubo_gap": 0.0,
+        "qaoa_shortfall": 0.0,
+        "qubo_shortfall": 0.0,
+        "feasible_mass": 0.17523301284050208,
+        "qaoa_ms": 5153.2929000022705,
+        "qubo_ms": 65.45190000178991
+      },
+      {
+        "n": 11,
+        "cap": 4,
+        "seed": 108,
+        "qaoa_gap": 0.867815659113436,
+        "qubo_gap": 0.0,
+        "qaoa_shortfall": 0.3148978382041083,
+        "qubo_shortfall": 0.0,
+        "feasible_mass": 0.478344563339268,
+        "qaoa_ms": 3280.107599995972,
+        "qubo_ms": 70.4972999956226
+      },
+      {
+        "n": 12,
+        "cap": 3,
+        "seed": 109,
+        "qaoa_gap": 1.5470034109740691,
+        "qubo_gap": 0.0,
+        "qaoa_shortfall": 0.19701818238152768,
+        "qubo_shortfall": 0.0,
+        "feasible_mass": 0.44413573101407766,
+        "qaoa_ms": 6625.449699997262,
+        "qubo_ms": 60.572800000954885
+      },
+      {
+        "n": 12,
+        "cap": 4,
+        "seed": 110,
+        "qaoa_gap": 0.2107953436873738,
+        "qubo_gap": 0.0,
+        "qaoa_shortfall": 0.04339413514044016,
+        "qubo_shortfall": 0.0,
+        "feasible_mass": 0.11745020227198712,
+        "qaoa_ms": 6614.2497999971965,
+        "qubo_ms": 75.27799999661511
+      },
+      {
+        "n": 8,
+        "cap": 5,
+        "seed": 111,
+        "qaoa_gap": 0.0,
+        "qubo_gap": 0.0,
+        "qaoa_shortfall": 0.0,
+        "qubo_shortfall": 0.0,
+        "feasible_mass": 0.5496432875226436,
+        "qaoa_ms": 2743.052300000272,
+        "qubo_ms": 55.51160000322852
+      },
+      {
+        "n": 10,
+        "cap": 5,
+        "seed": 112,
+        "qaoa_gap": 0.8060255346939778,
+        "qubo_gap": 0.0,
+        "qaoa_shortfall": 0.1997625261730812,
+        "qubo_shortfall": 0.0,
+        "feasible_mass": 0.17707625498619217,
+        "qaoa_ms": 4068.698700000823,
+        "qubo_ms": 59.26190000172937
+      }
+    ]
+  },
+  "tuning": {
+    "summary": {
+      "cases": 6,
+      "qaoa_mean_gap": 0.0,
+      "qaoa_worst_gap": 0.0,
+      "qaoa_optimal_hits": 6,
+      "qubo_mean_gap": 0.0,
+      "qubo_worst_gap": 0.0,
+      "qubo_optimal_hits": 6,
+      "qaoa_mean_ms": 3352.781033332576,
+      "qubo_mean_ms": 50.902099999802886
+    },
+    "cases": [
+      {
+        "n": 8,
+        "cap": 4,
+        "seed": 1,
+        "qaoa_gap": 0.0,
+        "qubo_gap": 0.0,
+        "qaoa_shortfall": 0.0,
+        "qubo_shortfall": 0.0,
+        "feasible_mass": 0.5821310954081781,
+        "qaoa_ms": 2874.2688999991515,
+        "qubo_ms": 58.59079999936512
+      },
+      {
+        "n": 8,
+        "cap": 4,
+        "seed": 2,
+        "qaoa_gap": 0.0,
+        "qubo_gap": 0.0,
+        "qaoa_shortfall": 0.0,
+        "qubo_shortfall": 0.0,
+        "feasible_mass": 0.6377239789313714,
+        "qaoa_ms": 2270.411099998455,
+        "qubo_ms": 39.35930000443477
+      },
+      {
+        "n": 8,
+        "cap": 3,
+        "seed": 3,
+        "qaoa_gap": 0.0,
+        "qubo_gap": 0.0,
+        "qaoa_shortfall": 0.0,
+        "qubo_shortfall": 0.0,
+        "feasible_mass": 0.5962588029059229,
+        "qaoa_ms": 763.3704000036232,
+        "qubo_ms": 37.78299999976298
+      },
+      {
+        "n": 10,
+        "cap": 3,
+        "seed": 4,
+        "qaoa_gap": 0.0,
+        "qubo_gap": 0.0,
+        "qaoa_shortfall": 0.0,
+        "qubo_shortfall": 0.0,
+        "feasible_mass": 0.6091571526187936,
+        "qaoa_ms": 3940.211699999054,
+        "qubo_ms": 56.82189999788534
+      },
+      {
+        "n": 10,
+        "cap": 4,
+        "seed": 5,
+        "qaoa_gap": 0.0,
+        "qubo_gap": 0.0,
+        "qaoa_shortfall": 0.0,
+        "qubo_shortfall": 0.0,
+        "feasible_mass": 0.42062998018335473,
+        "qaoa_ms": 4084.1609999988577,
+        "qubo_ms": 57.85789999936242
+      },
+      {
+        "n": 12,
+        "cap": 4,
+        "seed": 6,
+        "qaoa_gap": 0.0,
+        "qubo_gap": 0.0,
+        "qaoa_shortfall": 0.0,
+        "qubo_shortfall": 0.0,
+        "feasible_mass": 0.609028344673426,
+        "qaoa_ms": 6184.263099996315,
+        "qubo_ms": 54.99969999800669
+      }
+    ]
+  }
+}

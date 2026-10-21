@@ -1,0 +1,50 @@
+---
+config:
+  theme: base
+  themeVariables:
+    fontFamily: "Arial, Helvetica, sans-serif"
+    fontSize: "15px"
+---
+flowchart LR
+    SEED["Identical seed, prices,<br/>optimizer and estimator"]
+
+    SEED --> ARM1
+    SEED --> ARM2
+
+    subgraph ARM1["Arm A: review enabled"]
+        direction TB
+        O1["Optimizer produces candidate"]
+        R1["LLM reviewer"]
+        G1["Risk gate"]
+        T1["0 of 12 steps traded<br/>(both optimizers)"]
+        O1 --> R1 --> G1 --> T1
+    end
+
+    subgraph ARM2["Arm B: review bypassed"]
+        direction TB
+        O2["Optimizer produces candidate"]
+        B2["Reviewer skipped<br/>recorded as BYPASSED, not APPROVE"]
+        G2["Risk gate"]
+        T2["QUBO: 12 of 12 steps traded<br/>heuristic: 11 of 12"]
+        O2 --> B2 --> G2 --> T2
+    end
+
+    T1 --> CMP
+    T2 --> CMP
+
+    CMP{"Compare<br/>decision by decision"}
+    CMP --> RES
+
+    RES["100 percent of QUBO decisions changed<br/>(heuristic: 91.7 percent)<br/><br/>But: no trade in either arm with review on.<br/>Main-run log: 12 abstentions<br/>(11 verdicts, 1 failed citation check).<br/>Review avoided the heuristic loss of -1.6007 percent<br/>AND forfeited the QUBO gain of +0.9526 percent."]
+
+    VERDICT["Degenerate result.<br/>Uniformly conservative, not selective.<br/>Safety property holds. Decision value not supported."]
+    RES --> VERDICT
+
+    classDef arm fill:#E8F0FA,stroke:#1F4E79,stroke-width:1.5px,color:#12263F
+    classDef warn fill:#FDE5E2,stroke:#B03020,stroke-width:2.5px,color:#4A0F0A
+    classDef neutral fill:#F5F5F5,stroke:#777777,color:#222222
+    class O1,R1,G1,O2,B2,G2 arm
+    class VERDICT,RES warn
+    class SEED,CMP,T1,T2 neutral
+    style ARM1 fill:#FFFAF2,stroke:#D9A45B,stroke-dasharray: 4 3
+    style ARM2 fill:#F7FAFF,stroke:#9DB8D6,stroke-dasharray: 4 3

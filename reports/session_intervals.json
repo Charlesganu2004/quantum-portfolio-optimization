@@ -1,0 +1,440 @@
+{
+  "data_source": "offline factor model (no Alpaca credentials)",
+  "reviewer": "ollama",
+  "reviewer_is_language_model": true,
+  "ablation": {
+    "qubo_annealing": {
+      "intervals": 12,
+      "decisions_changed": 12,
+      "change_rate": 1.0,
+      "traded_with_review": 0,
+      "traded_without_review": 12,
+      "abstentions": 12,
+      "return_with_review": 0.0,
+      "return_without_review": 0.009525508965250395
+    },
+    "heuristic": {
+      "intervals": 12,
+      "decisions_changed": 11,
+      "change_rate": 0.9166666666666666,
+      "traded_with_review": 0,
+      "traded_without_review": 11,
+      "abstentions": 12,
+      "return_with_review": 0.0,
+      "return_without_review": -0.01600651273166187
+    }
+  },
+  "intervals": [
+    {
+      "index": 0,
+      "method": "qubo_annealing",
+      "estimator": "james_stein",
+      "candidate_id": "qubo_annealing-16a",
+      "positions": 4,
+      "expected_return": 0.2490093976810926,
+      "expected_risk": 0.07480352181239903,
+      "optimizer_runtime_ms": 131.1204000012367,
+      "evidence_ids": [
+        "formula:portfolio-variance",
+        "formula:sharpe-ratio",
+        "formula:transaction-costs",
+        "formula:mean-variance-objective"
+      ],
+      "reviewer_verdict": "ABSTAIN",
+      "reviewer_permits": false,
+      "reviewer_error": null,
+      "citations_verified": true,
+      "repaired_citations": [],
+      "reviewer_observations": [
+        "The optimizer's expected return estimate (24.90%) is supported by the evidence, but the evidence does not provide a clear basis for the expected risk estimate (7.48%).",
+        "The evidence does not provide a clear basis for the optimizer's allocation percentages."
+      ],
+      "risk_decision": "REJECT",
+      "risk_reasons": [
+        "reviewer_did_not_approve"
+      ],
+      "orders": 0,
+      "realized_pnl_usd": 0.0,
+      "equity_usd": 10.0,
+      "drawdown_percent": 0.0,
+      "no_trade_reason": "reviewer_did_not_approve"
+    },
+    {
+      "index": 1,
+      "method": "qubo_annealing",
+      "estimator": "james_stein",
+      "candidate_id": "qubo_annealing-16a",
+      "positions": 4,
+      "expected_return": 0.24054643314525598,
+      "expected_risk": 0.07497807479192752,
+      "optimizer_runtime_ms": 129.61860000359593,
+      "evidence_ids": [
+        "formula:portfolio-variance",
+        "formula:sharpe-ratio",
+        "formula:transaction-costs",
+        "formula:mean-variance-objective"
+      ],
+      "reviewer_verdict": "ABSTAIN",
+      "reviewer_permits": false,
+      "reviewer_error": null,
+      "citations_verified": true,
+      "repaired_citations": [],
+      "reviewer_observations": [
+        "The optimizer's expected return estimate (24.05%) is supported by the evidence, but the evidence does not provide a clear basis for the expected risk estimate (7.50%).",
+        "The evidence does not provide a clear basis for the transaction cost estimate (1.20%).",
+        "The evidence does not provide a clear basis for the mean-variance objective's risk aversion parameter (lambda)."
+      ],
+      "risk_decision": "REJECT",
+      "risk_reasons": [
+        "reviewer_did_not_approve"
+      ],
+      "orders": 0,
+      "realized_pnl_usd": 0.0,
+      "equity_usd": 10.0,
+      "drawdown_percent": 0.0,
+      "no_trade_reason": "reviewer_did_not_approve"
+    },
+    {
+      "index": 2,
+      "method": "qubo_annealing",
+      "estimator": "james_stein",
+      "candidate_id": "qubo_annealing-16a",
+      "positions": 4,
+      "expected_return": 0.24365541158266268,
+      "expected_risk": 0.07501233680773607,
+      "optimizer_runtime_ms": 135.88249999884283,
+      "evidence_ids": [
+        "formula:portfolio-variance",
+        "formula:sharpe-ratio",
+        "formula:transaction-costs",
+        "formula:mean-variance-objective"
+      ],
+      "reviewer_verdict": "ABSTAIN",
+      "reviewer_permits": false,
+      "reviewer_error": null,
+      "citations_verified": true,
+      "repaired_citations": [],
+      "reviewer_observations": [
+        "The optimizer's expected return estimate (24.37%) is supported by the evidence, but the evidence does not provide a clear basis for the expected risk estimate (7.50%).",
+        "The evidence does not provide a clear basis for the optimizer's allocation percentages."
+      ],
+      "risk_decision": "REJECT",
+      "risk_reasons": [
+        "reviewer_did_not_approve"
+      ],
+      "orders": 0,
+      "realized_pnl_usd": 0.0,
+      "equity_usd": 10.0,
+      "drawdown_percent": 0.0,
+      "no_trade_reason": "reviewer_did_not_approve"
+    },
+    {
+      "index": 3,
+      "method": "qubo_annealing",
+      "estimator": "james_stein",
+      "candidate_id": "qubo_annealing-16a",
+      "positions": 4,
+      "expected_return": 0.24492757522048025,
+      "expected_risk": 0.07502558534018203,
+      "optimizer_runtime_ms": 166.19969999737805,
+      "evidence_ids": [
+        "formula:portfolio-variance",
+        "formula:sharpe-ratio",
+        "formula:transaction-costs",
+        "formula:mean-variance-objective"
+      ],
+      "reviewer_verdict": "ABSTAIN",
+      "reviewer_permits": false,
+      "reviewer_error": null,
+      "citations_verified": true,
+      "repaired_citations": [],
+      "reviewer_observations": [
+        "The optimizer's expected return estimate (24.49%) is supported by the evidence, but the evidence does not provide a clear basis for the expected risk estimate (7.50%).",
+        "The evidence does not provide a clear basis for the transaction cost estimate (1.20%).",
+        "The evidence does not provide a clear basis for the mean-variance objective's risk aversion parameter (lambda)."
+      ],
+      "risk_decision": "REJECT",
+      "risk_reasons": [
+        "reviewer_did_not_approve"
+      ],
+      "orders": 0,
+      "realized_pnl_usd": 0.0,
+      "equity_usd": 10.0,
+      "drawdown_percent": 0.0,
+      "no_trade_reason": "reviewer_did_not_approve"
+    },
+    {
+      "index": 4,
+      "method": "qubo_annealing",
+      "estimator": "james_stein",
+      "candidate_id": "qubo_annealing-16a",
+      "positions": 4,
+      "expected_return": 0.24053835413670302,
+      "expected_risk": 0.07441345875684464,
+      "optimizer_runtime_ms": 102.25730000092881,
+      "evidence_ids": [
+        "formula:portfolio-variance",
+        "formula:sharpe-ratio",
+        "formula:transaction-costs",
+        "formula:mean-variance-objective"
+      ],
+      "reviewer_verdict": "ABSTAIN",
+      "reviewer_permits": false,
+      "reviewer_error": null,
+      "citations_verified": true,
+      "repaired_citations": [],
+      "reviewer_observations": [
+        "The optimizer's expected return estimate (24.05%) is supported by the evidence, but the evidence does not provide a clear source for this estimate."
+      ],
+      "risk_decision": "REJECT",
+      "risk_reasons": [
+        "reviewer_did_not_approve"
+      ],
+      "orders": 0,
+      "realized_pnl_usd": 0.0,
+      "equity_usd": 10.0,
+      "drawdown_percent": 0.0,
+      "no_trade_reason": "reviewer_did_not_approve"
+    },
+    {
+      "index": 5,
+      "method": "qubo_annealing",
+      "estimator": "james_stein",
+      "candidate_id": "qubo_annealing-16a",
+      "positions": 4,
+      "expected_return": 0.23585272377792663,
+      "expected_risk": 0.07412379348177245,
+      "optimizer_runtime_ms": 146.61099999648286,
+      "evidence_ids": [
+        "formula:portfolio-variance",
+        "formula:sharpe-ratio",
+        "formula:transaction-costs",
+        "formula:mean-variance-objective"
+      ],
+      "reviewer_verdict": "ABSTAIN",
+      "reviewer_permits": false,
+      "reviewer_error": "reviewer cited 1 non-existent source(s): ['source_id:transaction-costs']",
+      "citations_verified": true,
+      "repaired_citations": [],
+      "reviewer_observations": [
+        "review unavailable: reviewer cited 1 non-existent source(s): ['source_id:transaction-costs']"
+      ],
+      "risk_decision": "REJECT",
+      "risk_reasons": [
+        "reviewer_did_not_approve"
+      ],
+      "orders": 0,
+      "realized_pnl_usd": 0.0,
+      "equity_usd": 10.0,
+      "drawdown_percent": 0.0,
+      "no_trade_reason": "reviewer_did_not_approve"
+    },
+    {
+      "index": 6,
+      "method": "qubo_annealing",
+      "estimator": "james_stein",
+      "candidate_id": "qubo_annealing-16a",
+      "positions": 4,
+      "expected_return": 0.22847359760944985,
+      "expected_risk": 0.07442722283409649,
+      "optimizer_runtime_ms": 194.03840000450145,
+      "evidence_ids": [
+        "formula:portfolio-variance",
+        "formula:sharpe-ratio",
+        "formula:transaction-costs",
+        "formula:mean-variance-objective"
+      ],
+      "reviewer_verdict": "ABSTAIN",
+      "reviewer_permits": false,
+      "reviewer_error": null,
+      "citations_verified": true,
+      "repaired_citations": [],
+      "reviewer_observations": [
+        "The optimizer's expected return estimate (22.85%) is supported by the evidence, but the evidence does not provide a clear basis for the expected risk estimate (7.44%).",
+        "The optimizer's Sharpe ratio estimate is not supported by the evidence, as the formula for Sharpe ratio is not provided."
+      ],
+      "risk_decision": "REJECT",
+      "risk_reasons": [
+        "reviewer_did_not_approve"
+      ],
+      "orders": 0,
+      "realized_pnl_usd": 0.0,
+      "equity_usd": 10.0,
+      "drawdown_percent": 0.0,
+      "no_trade_reason": "reviewer_did_not_approve"
+    },
+    {
+      "index": 7,
+      "method": "qubo_annealing",
+      "estimator": "james_stein",
+      "candidate_id": "qubo_annealing-16a",
+      "positions": 4,
+      "expected_return": 0.2239756701448456,
+      "expected_risk": 0.07445128908895297,
+      "optimizer_runtime_ms": 153.28999999474036,
+      "evidence_ids": [
+        "formula:portfolio-variance",
+        "formula:sharpe-ratio",
+        "formula:transaction-costs",
+        "formula:mean-variance-objective"
+      ],
+      "reviewer_verdict": "ABSTAIN",
+      "reviewer_permits": false,
+      "reviewer_error": null,
+      "citations_verified": true,
+      "repaired_citations": [],
+      "reviewer_observations": [
+        "The optimizer's expected return estimate (22.40%) is supported by the evidence, but the evidence does not provide a clear basis for the expected risk estimate (7.45%).",
+        "The optimizer's Sharpe ratio estimate is not supported by the evidence, as the formula for Sharpe ratio is not provided."
+      ],
+      "risk_decision": "REJECT",
+      "risk_reasons": [
+        "reviewer_did_not_approve"
+      ],
+      "orders": 0,
+      "realized_pnl_usd": 0.0,
+      "equity_usd": 10.0,
+      "drawdown_percent": 0.0,
+      "no_trade_reason": "reviewer_did_not_approve"
+    },
+    {
+      "index": 8,
+      "method": "qubo_annealing",
+      "estimator": "james_stein",
+      "candidate_id": "qubo_annealing-16a",
+      "positions": 4,
+      "expected_return": 0.21580023652539843,
+      "expected_risk": 0.07443713972138838,
+      "optimizer_runtime_ms": 105.56770000403048,
+      "evidence_ids": [
+        "formula:portfolio-variance",
+        "formula:sharpe-ratio",
+        "formula:transaction-costs",
+        "formula:mean-variance-objective"
+      ],
+      "reviewer_verdict": "ABSTAIN",
+      "reviewer_permits": false,
+      "reviewer_error": null,
+      "citations_verified": true,
+      "repaired_citations": [],
+      "reviewer_observations": [
+        "The optimizer's expected return estimate (21.58%) is supported by the evidence, but the evidence does not provide a clear basis for the expected risk estimate (7.44%).",
+        "The evidence does not provide a clear basis for the transaction cost estimate (1.20%).",
+        "The evidence does not provide a clear basis for the mean-variance objective's risk aversion parameter (lambda)."
+      ],
+      "risk_decision": "REJECT",
+      "risk_reasons": [
+        "reviewer_did_not_approve"
+      ],
+      "orders": 0,
+      "realized_pnl_usd": 0.0,
+      "equity_usd": 10.0,
+      "drawdown_percent": 0.0,
+      "no_trade_reason": "reviewer_did_not_approve"
+    },
+    {
+      "index": 9,
+      "method": "qubo_annealing",
+      "estimator": "james_stein",
+      "candidate_id": "qubo_annealing-16a",
+      "positions": 4,
+      "expected_return": 0.2145008192282285,
+      "expected_risk": 0.07465828416362753,
+      "optimizer_runtime_ms": 102.87049999897135,
+      "evidence_ids": [
+        "formula:portfolio-variance",
+        "formula:sharpe-ratio",
+        "formula:transaction-costs",
+        "formula:mean-variance-objective"
+      ],
+      "reviewer_verdict": "ABSTAIN",
+      "reviewer_permits": false,
+      "reviewer_error": null,
+      "citations_verified": true,
+      "repaired_citations": [],
+      "reviewer_observations": [
+        "The optimizer's expected return estimate (21.45%) is supported by the evidence, but the evidence does not provide a clear basis for the expected risk estimate (7.47%).",
+        "The evidence does not provide a clear basis for the optimizer's allocation percentages."
+      ],
+      "risk_decision": "REJECT",
+      "risk_reasons": [
+        "reviewer_did_not_approve"
+      ],
+      "orders": 0,
+      "realized_pnl_usd": 0.0,
+      "equity_usd": 10.0,
+      "drawdown_percent": 0.0,
+      "no_trade_reason": "reviewer_did_not_approve"
+    },
+    {
+      "index": 10,
+      "method": "qubo_annealing",
+      "estimator": "james_stein",
+      "candidate_id": "qubo_annealing-16a",
+      "positions": 4,
+      "expected_return": 0.22044858641372808,
+      "expected_risk": 0.07462430864629441,
+      "optimizer_runtime_ms": 234.89889999473235,
+      "evidence_ids": [
+        "formula:portfolio-variance",
+        "formula:sharpe-ratio",
+        "formula:transaction-costs",
+        "formula:mean-variance-objective"
+      ],
+      "reviewer_verdict": "ABSTAIN",
+      "reviewer_permits": false,
+      "reviewer_error": null,
+      "citations_verified": true,
+      "repaired_citations": [],
+      "reviewer_observations": [
+        "The optimizer's expected return estimate (22.04%) is supported by the evidence, but the evidence does not provide a clear basis for the expected risk estimate (7.46%).",
+        "The Sharpe ratio calculation (S = (E[R_p] - R_f) / sigma_p) is supported by the evidence, but the evidence does not provide a clear basis for the return-free Sharpe ratio calculation (R_f).",
+        "The transaction cost calculation (cost = turnover * cost_rate) is supported by the evidence, but the evidence does not provide a clear basis for the cost rate (0.60% taker / 0.40% maker).",
+        "The mean-variance objective function maximization (maximize w'mu - lambda * w' Sigma w subject to sum(w) = 1 and bounds on w) is supported by the evidence, but the evidence does not provide a clear basis for the risk aversion parameter (lambda)."
+      ],
+      "risk_decision": "REJECT",
+      "risk_reasons": [
+        "reviewer_did_not_approve"
+      ],
+      "orders": 0,
+      "realized_pnl_usd": 0.0,
+      "equity_usd": 10.0,
+      "drawdown_percent": 0.0,
+      "no_trade_reason": "reviewer_did_not_approve"
+    },
+    {
+      "index": 11,
+      "method": "qubo_annealing",
+      "estimator": "james_stein",
+      "candidate_id": "qubo_annealing-16a",
+      "positions": 4,
+      "expected_return": 0.2274036168439605,
+      "expected_risk": 0.07445356243013088,
+      "optimizer_runtime_ms": 190.41879999713274,
+      "evidence_ids": [
+        "formula:portfolio-variance",
+        "formula:sharpe-ratio",
+        "formula:transaction-costs",
+        "formula:mean-variance-objective"
+      ],
+      "reviewer_verdict": "ABSTAIN",
+      "reviewer_permits": false,
+      "reviewer_error": null,
+      "citations_verified": true,
+      "repaired_citations": [],
+      "reviewer_observations": [
+        "The optimizer's expected return estimate (22.74%) is supported by the evidence, but the evidence does not provide a clear basis for the expected risk estimate (7.45%).",
+        "The optimizer's Sharpe ratio estimate is not supported by the evidence, as the formula for Sharpe ratio is not provided."
+      ],
+      "risk_decision": "REJECT",
+      "risk_reasons": [
+        "reviewer_did_not_approve"
+      ],
+      "orders": 0,
+      "realized_pnl_usd": 0.0,
+      "equity_usd": 10.0,
+      "drawdown_percent": 0.0,
+      "no_trade_reason": "reviewer_did_not_approve"
+    }
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "problems": 20,
+  "cases": [
+    {
+      "n": 12,
+      "cap": 4
+    },
+    {
+      "n": 16,
+      "cap": 4
+    },
+    {
+      "n": 16,
+      "cap": 6
+    },
+    {
+      "n": 20,
+      "cap": 5
+    }
+  ],
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "methods": {
+    "mean_variance": {
+      "mean_gap": 0.01127055099754043,
+      "worst_gap": 0.20951345014662168,
+      "optimal_hit_rate": 0.8
+    },
+    "heuristic": {
+      "mean_gap": 7.410054350251286e-05,
+      "worst_gap": 0.0014820108700502573,
+      "optimal_hit_rate": 0.95
+    },
+    "qubo_annealing": {
+      "mean_gap": 0.0018405506887243738,
+      "worst_gap": 0.024282494948375845,
+      "optimal_hit_rate": 0.7
+    }
+  },
+  "per_problem": [
+    {
+      "n": 12,
+      "cap": 4,
+      "seed": 1,
+      "gaps": {
+        "mean_variance": 0.20951345014662168,
+        "heuristic": 0.0,
+        "qubo_annealing": 0.0
+      }
+    },
+    {
+      "n": 12,
+      "cap": 4,
+      "seed": 2,
+      "gaps": {
+        "mean_variance": 0.0,
+        "heuristic": 0.0,
+        "qubo_annealing": 0.0
+      }
+    },
+    {
+      "n": 12,
+      "cap": 4,
+      "seed": 3,
+      "gaps": {
+        "mean_variance": 0.0,
+        "heuristic": 0.0,
+        "qubo_annealing": 0.0022437197173850636
+      }
+    },
+    {
+      "n": 12,
+      "cap": 4,
+      "seed": 4,
+      "gaps": {
+        "mean_variance": 0.0,
+        "heuristic": 0.0,
+        "qubo_annealing": 0.0
+      }
+    },
+    {
+      "n": 12,
+      "cap": 4,
+      "seed": 5,
+      "gaps": {
+        "mean_variance": 0.0,
+        "heuristic": 0.0,
+        "qubo_annealing": 0.0
+      }
+    },
+    {
+      "n": 16,
+      "cap": 4,
+      "seed": 1,
+      "gaps": {
+        "mean_variance": 0.0,
+        "heuristic": 0.0,
+        "qubo_annealing": 0.0
+      }
+    },
+    {
+      "n": 16,
+      "cap": 4,
+      "seed": 2,
+      "gaps": {
+        "mean_variance": 0.0,
+        "heuristic": 0.0,
+        "qubo_annealing": 0.0
+      }
+    },
+    {
+      "n": 16,
+      "cap": 4,
+      "seed": 3,
+      "gaps": {
+        "mean_variance": 0.0,
+        "heuristic": 0.0,
+        "qubo_annealing": 0.0
+      }
+    },
+    {
+      "n": 16,
+      "cap": 4,
+      "seed": 4,
+      "gaps": {
+        "mean_variance": 0.0,
+        "heuristic": 0.0,
+        "qubo_annealing": 0.0
+      }
+    },
+    {
+      "n": 16,
+      "cap": 4,
+      "seed": 5,
+      "gaps": {
+        "mean_variance": 0.0034879274527138174,
+        "heuristic": 0.0,
+        "qubo_annealing": 0.0
+      }
+    },
+    {
+      "n": 16,
+      "cap": 6,
+      "seed": 1,
+      "gaps": {
+        "mean_variance": 0.010927631481422836,
+        "heuristic": 0.0,
+        "qubo_annealing": 0.0
+      }
+    },
+    {
+      "n": 16,
+      "cap": 6,
+      "seed": 2,
+      "gaps": {
+        "mean_variance": 0.0,
+        "heuristic": 0.0,
+        "qubo_annealing": 0.0
+      }
+    },
+    {
+      "n": 16,
+      "cap": 6,
+      "seed": 3,
+      "gaps": {
+        "mean_variance": 0.0,
+        "heuristic": 0.0,
+        "qubo_annealing": 0.0007204067504763859
+      }
+    },
+    {
+      "n": 16,
+      "cap": 6,
+      "seed": 4,
+      "gaps": {
+        "mean_variance": 0.0,
+        "heuristic": 0.0,
+        "qubo_annealing": 0.0
+      }
+    },
+    {
+      "n": 16,
+      "cap": 6,
+      "seed": 5,
+      "gaps": {
+        "mean_variance": 0.0,
+        "heuristic": 0.0,
+        "qubo_annealing": 0.006060509498456402
+      }
+    },
+    {
+      "n": 20,
+      "cap": 5,
+      "seed": 1,
+      "gaps": {
+        "mean_variance": 0.0,
+        "heuristic": 0.0,
+        "qubo_annealing": 0.002021871989743529
+      }
+    },
+    {
+      "n": 20,
+      "cap": 5,
+      "seed": 2,
+      "gaps": {
+        "mean_variance": 0.0014820108700502573,
+        "heuristic": 0.0014820108700502573,
+        "qubo_annealing": 0.0014820108700502573
+      }
+    },
+    {
+      "n": 20,
+      "cap": 5,
+      "seed": 3,
+      "gaps": {
+        "mean_variance": 0.0,
+        "heuristic": 0.0,
+        "qubo_annealing": 0.024282494948375845
+      }
+    },
+    {
+      "n": 20,
+      "cap": 5,
+      "seed": 4,
+      "gaps": {
+        "mean_variance": 0.0,
+        "heuristic": 0.0,
+        "qubo_annealing": 0.0
+      }
+    },
+    {
+      "n": 20,
+      "cap": 5,
+      "seed": 5,
+      "gaps": {
+        "mean_variance": 0.0,
+        "heuristic": 0.0,
+        "qubo_annealing": 0.0
+      }
+    }
+  ]
+}

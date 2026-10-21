@@ -1,0 +1,28 @@
+---
+config:
+  theme: base
+  themeVariables:
+    fontFamily: "Arial, Helvetica, sans-serif"
+    fontSize: "15px"
+---
+flowchart LR
+    IN["Inputs<br/>mu, Sigma, lambda, K, w_max"]
+
+    IN --> Q1["Build QUBO<br/>E(x) = -(1/K) mu'x + (lambda/K^2) x'Sigma x + P(sum x - K)^2"]
+    Q1 --> Q2["Expand using x_i squared = x_i<br/>gives symmetric Q with E(x) = x'Qx"]
+    Q2 --> Q3{"Move type?"}
+
+    Q3 -- "single bit flip<br/>(naive)" --> BAD["Cardinality changes<br/>penalty activates and dominates<br/>search degenerates to any feasible subset"]
+    Q3 -- "swap: one held for one unheld<br/>(this implementation)" --> GOOD["State never leaves exactly-K set<br/>penalty contributes EXACTLY ZERO to delta E<br/>pure objective landscape is searched"]
+
+    GOOD --> ANN["Metropolis annealing<br/>delta E = 2(h_j - h_i) + Q_ii + Q_jj - 2Q_ij<br/>O(1) to evaluate, O(n) to apply"]
+    ANN --> REP["Repair to exact cardinality<br/>feasibility guaranteed, not hoped for"]
+    REP --> QP["Continuous weights from the SAME QP<br/>every other method uses"]
+    QP --> OUT["Portfolio weights<br/>comparison isolates SELECTION, not weighting"]
+
+    classDef good fill:#E3F5E6,stroke:#2E7D32,stroke-width:2px,color:#12331A
+    classDef bad fill:#FDE5E2,stroke:#B03020,stroke-width:2px,color:#4A0F0A
+    classDef step fill:#E8F0FA,stroke:#1F4E79,stroke-width:1.5px,color:#12263F
+    class GOOD,OUT good
+    class BAD bad
+    class IN,Q1,Q2,ANN,REP,QP step

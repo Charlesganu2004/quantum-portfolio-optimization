@@ -1,0 +1,510 @@
+{
+  "host": {
+    "logical_cores": 8,
+    "machine": "AMD64",
+    "python": "3.11.5",
+    "blas_threads_per_worker": 1
+  },
+  "workload": {
+    "n_problems": 48,
+    "n_assets": 24
+  },
+  "measurements": [
+    {
+      "method": "mean_variance",
+      "mode": "serial",
+      "workers": 1,
+      "wall_seconds": 0.29202569999324623,
+      "throughput_per_second": 164.36909491565333,
+      "speedup_vs_serial": 1.0,
+      "efficiency": 1.0,
+      "cpu_seconds_in_solver": 0.28288310002244543
+    },
+    {
+      "method": "mean_variance",
+      "mode": "threads",
+      "workers": 1,
+      "wall_seconds": 0.2956246999965515,
+      "throughput_per_second": 162.36802946627913,
+      "speedup_vs_serial": 0.987825780446129,
+      "efficiency": 0.987825780446129,
+      "cpu_seconds_in_solver": 0.2841045999812195
+    },
+    {
+      "method": "mean_variance",
+      "mode": "threads",
+      "workers": 2,
+      "wall_seconds": 0.34268660000816453,
+      "throughput_per_second": 140.06967298650252,
+      "speedup_vs_serial": 0.8521655062855936,
+      "efficiency": 0.4260827531427968,
+      "cpu_seconds_in_solver": 0.6615204000117956
+    },
+    {
+      "method": "mean_variance",
+      "mode": "threads",
+      "workers": 4,
+      "wall_seconds": 0.4429521999991266,
+      "throughput_per_second": 108.36383700113612,
+      "speedup_vs_serial": 0.6592713615460586,
+      "efficiency": 0.16481784038651465,
+      "cpu_seconds_in_solver": 1.7155829999683192
+    },
+    {
+      "method": "mean_variance",
+      "mode": "threads",
+      "workers": 8,
+      "wall_seconds": 0.4647817000077339,
+      "throughput_per_second": 103.27428984230939,
+      "speedup_vs_serial": 0.6283072246355375,
+      "efficiency": 0.07853840307944218,
+      "cpu_seconds_in_solver": 3.567036600012216
+    },
+    {
+      "method": "mean_variance",
+      "mode": "processes",
+      "workers": 1,
+      "wall_seconds": 3.1942008000041824,
+      "throughput_per_second": 15.027233103171582,
+      "speedup_vs_serial": 0.09142371387323674,
+      "efficiency": 0.09142371387323674,
+      "cpu_seconds_in_solver": 0.2764954999584006
+    },
+    {
+      "method": "mean_variance",
+      "mode": "processes",
+      "workers": 2,
+      "wall_seconds": 2.7758892999991076,
+      "throughput_per_second": 17.291755834793353,
+      "speedup_vs_serial": 0.10520077295349642,
+      "efficiency": 0.05260038647674821,
+      "cpu_seconds_in_solver": 0.27401870001631323
+    },
+    {
+      "method": "mean_variance",
+      "mode": "processes",
+      "workers": 4,
+      "wall_seconds": 5.275777799994103,
+      "throughput_per_second": 9.09818453689495,
+      "speedup_vs_serial": 0.055352160584468256,
+      "efficiency": 0.013838040146117064,
+      "cpu_seconds_in_solver": 0.30919150001136586
+    },
+    {
+      "method": "mean_variance",
+      "mode": "processes",
+      "workers": 8,
+      "wall_seconds": 7.415704200000619,
+      "throughput_per_second": 6.472750086228627,
+      "speedup_vs_serial": 0.03937936197525541,
+      "efficiency": 0.004922420246906927,
+      "cpu_seconds_in_solver": 0.3640416999987792
+    },
+    {
+      "method": "heuristic",
+      "mode": "serial",
+      "workers": 1,
+      "wall_seconds": 3.6500411000015447,
+      "throughput_per_second": 13.150536852853435,
+      "speedup_vs_serial": 1.0,
+      "efficiency": 1.0,
+      "cpu_seconds_in_solver": 3.6406737999641337
+    },
+    {
+      "method": "heuristic",
+      "mode": "threads",
+      "workers": 1,
+      "wall_seconds": 3.699267100004363,
+      "throughput_per_second": 12.975543182578892,
+      "speedup_vs_serial": 0.9866930398178709,
+      "efficiency": 0.9866930398178709,
+      "cpu_seconds_in_solver": 3.6830266999750165
+    },
+    {
+      "method": "heuristic",
+      "mode": "threads",
+      "workers": 2,
+      "wall_seconds": 4.3415944000007585,
+      "throughput_per_second": 11.055846211703152,
+      "speedup_vs_serial": 0.840714438916935,
+      "efficiency": 0.4203572194584675,
+      "cpu_seconds_in_solver": 8.642774499967345
+    },
+    {
+      "method": "heuristic",
+      "mode": "threads",
+      "workers": 4,
+      "wall_seconds": 5.8939239000028465,
+      "throughput_per_second": 8.143980277719029,
+      "speedup_vs_serial": 0.6192888069015926,
+      "efficiency": 0.15482220172539815,
+      "cpu_seconds_in_solver": 23.317681300002732
+    },
+    {
+      "method": "heuristic",
+      "mode": "threads",
+      "workers": 8,
+      "wall_seconds": 6.251232800001162,
+      "throughput_per_second": 7.678485434103666,
+      "speedup_vs_serial": 0.5838914045883663,
+      "efficiency": 0.07298642557354579,
+      "cpu_seconds_in_solver": 47.68589449994033
+    },
+    {
+      "method": "heuristic",
+      "mode": "processes",
+      "workers": 1,
+      "wall_seconds": 8.382207599992398,
+      "throughput_per_second": 5.72641507948855,
+      "speedup_vs_serial": 0.43545104991253797,
+      "efficiency": 0.43545104991253797,
+      "cpu_seconds_in_solver": 3.590905400022166
+    },
+    {
+      "method": "heuristic",
+      "mode": "processes",
+      "workers": 2,
+      "wall_seconds": 5.60276999999769,
+      "throughput_per_second": 8.567190871661658,
+      "speedup_vs_serial": 0.6514708081900648,
+      "efficiency": 0.3257354040950324,
+      "cpu_seconds_in_solver": 4.456433100014692
+    },
+    {
+      "method": "heuristic",
+      "mode": "processes",
+      "workers": 4,
+      "wall_seconds": 5.331421399998362,
+      "throughput_per_second": 9.003227544537138,
+      "speedup_vs_serial": 0.6846281368797196,
+      "efficiency": 0.1711570342199299,
+      "cpu_seconds_in_solver": 4.30259029995068
+    },
+    {
+      "method": "heuristic",
+      "mode": "processes",
+      "workers": 8,
+      "wall_seconds": 7.5614140999969095,
+      "throughput_per_second": 6.348018950584867,
+      "speedup_vs_serial": 0.48271937652548835,
+      "efficiency": 0.060339922065686044,
+      "cpu_seconds_in_solver": 4.845348200018634
+    },
+    {
+      "method": "qubo_annealing",
+      "mode": "serial",
+      "workers": 1,
+      "wall_seconds": 6.31265269999858,
+      "throughput_per_second": 7.6037764599359,
+      "speedup_vs_serial": 1.0,
+      "efficiency": 1.0,
+      "cpu_seconds_in_solver": 6.3017783000541385
+    },
+    {
+      "method": "qubo_annealing",
+      "mode": "threads",
+      "workers": 1,
+      "wall_seconds": 6.0572822999965865,
+      "throughput_per_second": 7.924345873730707,
+      "speedup_vs_serial": 1.0421592369901824,
+      "efficiency": 1.0421592369901824,
+      "cpu_seconds_in_solver": 6.040854200007743
+    },
+    {
+      "method": "qubo_annealing",
+      "mode": "threads",
+      "workers": 2,
+      "wall_seconds": 7.63314089999767,
+      "throughput_per_second": 6.288368134278073,
+      "speedup_vs_serial": 0.8270059183632398,
+      "efficiency": 0.4135029591816199,
+      "cpu_seconds_in_solver": 15.167120299956878
+    },
+    {
+      "method": "qubo_annealing",
+      "mode": "threads",
+      "workers": 4,
+      "wall_seconds": 5.881753199995728,
+      "throughput_per_second": 8.160832045797989,
+      "speedup_vs_serial": 1.0732603843362833,
+      "efficiency": 0.26831509608407084,
+      "cpu_seconds_in_solver": 23.2296336999716
+    },
+    {
+      "method": "qubo_annealing",
+      "mode": "threads",
+      "workers": 8,
+      "wall_seconds": 6.0409393000009,
+      "throughput_per_second": 7.945784192864319,
+      "speedup_vs_serial": 1.0449786674727288,
+      "efficiency": 0.1306223334340911,
+      "cpu_seconds_in_solver": 46.39518560002034
+    },
+    {
+      "method": "qubo_annealing",
+      "mode": "processes",
+      "workers": 1,
+      "wall_seconds": 8.286333399999421,
+      "throughput_per_second": 5.792670615932899,
+      "speedup_vs_serial": 0.7618149542473177,
+      "efficiency": 0.7618149542473177,
+      "cpu_seconds_in_solver": 5.111780199891655
+    },
+    {
+      "method": "qubo_annealing",
+      "mode": "processes",
+      "workers": 2,
+      "wall_seconds": 5.139744300002349,
+      "throughput_per_second": 9.338985988072999,
+      "speedup_vs_serial": 1.2282036481845402,
+      "efficiency": 0.6141018240922701,
+      "cpu_seconds_in_solver": 5.115922300014063
+    },
+    {
+      "method": "qubo_annealing",
+      "mode": "processes",
+      "workers": 4,
+      "wall_seconds": 4.245152400006191,
+      "throughput_per_second": 11.307014560874187,
+      "speedup_vs_serial": 1.4870261665963687,
+      "efficiency": 0.37175654164909216,
+      "cpu_seconds_in_solver": 5.623432599997614
+    },
+    {
+      "method": "qubo_annealing",
+      "mode": "processes",
+      "workers": 8,
+      "wall_seconds": 6.322482100003981,
+      "throughput_per_second": 7.591955064605051,
+      "speedup_vs_serial": 0.9984453257676451,
+      "efficiency": 0.12480566572095564,
+      "cpu_seconds_in_solver": 6.220421500067459
+    }
+  ],
+  "coarse_grained": [
+    {
+      "method": "mean_variance",
+      "mode": "serial",
+      "workers": 1,
+      "wall_seconds": 1.1397103000053903,
+      "speedup_vs_serial": 1.0,
+      "efficiency": 1.0
+    },
+    {
+      "method": "mean_variance",
+      "mode": "processes",
+      "workers": 2,
+      "wall_seconds": 3.3132445000082953,
+      "speedup_vs_serial": 0.3439861742779734,
+      "efficiency": 0.1719930871389867
+    },
+    {
+      "method": "mean_variance",
+      "mode": "processes",
+      "workers": 4,
+      "wall_seconds": 4.007369699989795,
+      "speedup_vs_serial": 0.28440358273115973,
+      "efficiency": 0.07110089568278993
+    },
+    {
+      "method": "mean_variance",
+      "mode": "processes",
+      "workers": 8,
+      "wall_seconds": 6.813924000001862,
+      "speedup_vs_serial": 0.1672619624177022,
+      "efficiency": 0.020907745302212774
+    },
+    {
+      "method": "heuristic",
+      "mode": "serial",
+      "workers": 1,
+      "wall_seconds": 14.448485000000801,
+      "speedup_vs_serial": 1.0,
+      "efficiency": 1.0
+    },
+    {
+      "method": "heuristic",
+      "mode": "processes",
+      "workers": 2,
+      "wall_seconds": 11.383946900008596,
+      "speedup_vs_serial": 1.2691982075206176,
+      "efficiency": 0.6345991037603088
+    },
+    {
+      "method": "heuristic",
+      "mode": "processes",
+      "workers": 4,
+      "wall_seconds": 8.447780100003001,
+      "speedup_vs_serial": 1.7103292023422423,
+      "efficiency": 0.42758230058556057
+    },
+    {
+      "method": "heuristic",
+      "mode": "processes",
+      "workers": 8,
+      "wall_seconds": 12.04257800000778,
+      "speedup_vs_serial": 1.1997833852511868,
+      "efficiency": 0.14997292315639835
+    },
+    {
+      "method": "qubo_annealing",
+      "mode": "serial",
+      "workers": 1,
+      "wall_seconds": 21.86784869999974,
+      "speedup_vs_serial": 1.0,
+      "efficiency": 1.0
+    },
+    {
+      "method": "qubo_annealing",
+      "mode": "processes",
+      "workers": 2,
+      "wall_seconds": 15.214665699997568,
+      "speedup_vs_serial": 1.437287491634025,
+      "efficiency": 0.7186437458170125
+    },
+    {
+      "method": "qubo_annealing",
+      "mode": "processes",
+      "workers": 4,
+      "wall_seconds": 10.503424299997278,
+      "speedup_vs_serial": 2.081973276087248,
+      "efficiency": 0.520493319021812
+    },
+    {
+      "method": "qubo_annealing",
+      "mode": "processes",
+      "workers": 8,
+      "wall_seconds": 12.132771599994157,
+      "speedup_vs_serial": 1.8023786667186803,
+      "efficiency": 0.22529733333983504
+    }
+  ],
+  "latency_by_size": [
+    {
+      "method": "mean_variance",
+      "n_assets": 8,
+      "median_ms": 4.502499999944121,
+      "mean_ms": 4.467939995811321,
+      "max_ms": 5.385299999034032
+    },
+    {
+      "method": "heuristic",
+      "n_assets": 8,
+      "median_ms": 10.731000002124347,
+      "mean_ms": 10.55408000247553,
+      "max_ms": 12.149000001954846
+    },
+    {
+      "method": "qubo_annealing",
+      "n_assets": 8,
+      "median_ms": 23.00499999546446,
+      "mean_ms": 27.3815399967134,
+      "max_ms": 37.07439999561757
+    },
+    {
+      "method": "mean_variance",
+      "n_assets": 16,
+      "median_ms": 2.7292000013403594,
+      "mean_ms": 2.8487400035373867,
+      "max_ms": 3.479999999399297
+    },
+    {
+      "method": "heuristic",
+      "n_assets": 16,
+      "median_ms": 20.77790000475943,
+      "mean_ms": 20.880940003553405,
+      "max_ms": 24.21380000305362
+    },
+    {
+      "method": "qubo_annealing",
+      "n_assets": 16,
+      "median_ms": 62.85610000486486,
+      "mean_ms": 68.55626000324264,
+      "max_ms": 88.99920000112616
+    },
+    {
+      "method": "mean_variance",
+      "n_assets": 24,
+      "median_ms": 5.466000002343208,
+      "mean_ms": 5.509640002856031,
+      "max_ms": 6.697999997413717
+    },
+    {
+      "method": "heuristic",
+      "n_assets": 24,
+      "median_ms": 62.98180000158027,
+      "mean_ms": 59.45145999430679,
+      "max_ms": 75.10779998847283
+    },
+    {
+      "method": "qubo_annealing",
+      "n_assets": 24,
+      "median_ms": 59.91619999986142,
+      "mean_ms": 62.27768000098877,
+      "max_ms": 70.75390001409687
+    },
+    {
+      "method": "mean_variance",
+      "n_assets": 32,
+      "median_ms": 4.976199998054653,
+      "mean_ms": 5.144999996991828,
+      "max_ms": 6.015499995555729
+    },
+    {
+      "method": "heuristic",
+      "n_assets": 32,
+      "median_ms": 58.95869999949355,
+      "mean_ms": 58.73942000325769,
+      "max_ms": 61.33810000028461
+    },
+    {
+      "method": "qubo_annealing",
+      "n_assets": 32,
+      "median_ms": 76.73919999797363,
+      "mean_ms": 92.14812000282109,
+      "max_ms": 160.84900000714697
+    },
+    {
+      "method": "mean_variance",
+      "n_assets": 48,
+      "median_ms": 18.919399997685105,
+      "mean_ms": 19.098039995878935,
+      "max_ms": 23.088899994036183
+    },
+    {
+      "method": "heuristic",
+      "n_assets": 48,
+      "median_ms": 270.66690000356175,
+      "mean_ms": 281.98766000568867,
+      "max_ms": 328.62820000445936
+    },
+    {
+      "method": "qubo_annealing",
+      "n_assets": 48,
+      "median_ms": 227.78299999481533,
+      "mean_ms": 239.0058599994518,
+      "max_ms": 290.9102999983588
+    },
+    {
+      "method": "mean_variance",
+      "n_assets": 64,
+      "median_ms": 33.63800000806805,
+      "mean_ms": 33.67705999989994,
+      "max_ms": 38.26060000574216
+    },
+    {
+      "method": "heuristic",
+      "n_assets": 64,
+      "median_ms": 540.8853999979328,
+      "mean_ms": 556.2758799962467,
+      "max_ms": 602.5468000007095
+    },
+    {
+      "method": "qubo_annealing",
+      "n_assets": 64,
+      "median_ms": 312.68659999477677,
+      "mean_ms": 329.40821999509353,
+      "max_ms": 408.07150000182446
+    }
+  ]
+}
