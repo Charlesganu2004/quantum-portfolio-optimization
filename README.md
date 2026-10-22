@@ -1,4 +1,4 @@
-# Quantum-Inspired Portfolio Optimization
+# Quantum Portfolio Optimization
 
 **Timeline:** August 2026
 
